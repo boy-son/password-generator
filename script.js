@@ -1,8 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-function generatePassword();
-
 var UCArray = [];
 var LCArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var NumArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
@@ -22,7 +20,9 @@ var toUpper = function (x) {
 return x.ToUpperCase();  
 }
 
-CaseChange = LCArray.map(toUpper)
+CaseChange = LCArray.map(toUpper);
+
+function generatePassword(); {
 
 if (num) {
 resArray = resArray.concat(NumArray);  
@@ -42,9 +42,9 @@ resArray = resArray.concat(CharArray);
 
 for (var i = 0; i < numCharacter; i++) {
 USArray.push (resArray[Math.floor[Math.random() * resArray.length]]);  
-}
+} 
 return USArray.join("")
-
+}
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
