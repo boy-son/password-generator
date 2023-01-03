@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var UCArray = [];
+var UCArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', 'Z'];
 var LCArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var NumArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var CharArray = ['^', '$', '#', '@', '!', '%', '&', '*', '(', ')'];
@@ -11,17 +11,13 @@ var num = confirm("Would you like numbers in your password?")
 var uppercase = confirm("Would you like to use uppercase letters in your password?")
 var lowercase = confirm("Would you like to add lowercase letters in your password?")
 var characters = confirm("Would you like to use special characters in your password?")
-var toUpper = function (x) {
-  return x.ToUpperCase();
-}
-var CaseChange = LCArray.map(toUpper);
 
-function generatePassword(); {
+function generatePassword() {
   var resArray = [];
   var USArray = "";
   if (charcount < 8 || charcount > 128) {
     alert("Your password must be between 8 and 128 characters!")
-    generatePassword()
+    writePassword()
   }
   else {
     if (num = true) {
@@ -29,8 +25,7 @@ function generatePassword(); {
     }
 
     if (uppercase = true) {
-      resArray = resArray.concat(LCArray);
-      CaseChange = true
+      resArray = resArray.concat(UCArray);
     }
 
     if (lowercase = true) {
@@ -42,7 +37,6 @@ function generatePassword(); {
     }
     if (resArray.length === 0) {
       alert("You must have at least one character type in your password");
-      writePassword()
     } else {
       for (var i = 0; i < charcount; i++) {
         USArray.push(resArray[Math.floor[Math.random() * resArray.length]]);
