@@ -5,10 +5,11 @@ var UCArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 
 var LCArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var NumArray = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var CharArray = ['^', '$', '#', '@', '!', '%', '&', '*', '(', ')'];
-var resArray = [];
-var USArray = "";
 
-function generatePassword() { 
+
+function generatePassword() {
+  var resArray = [];
+  var USArray = "";
   var charcount = prompt("How many characters long would you like your password to be? \n8-128");
   if (charcount < 8 || charcount > 128) {
     alert("Your password must be between 8 and 128 characters!")
@@ -37,8 +38,9 @@ function generatePassword() {
         var random = [Math.floor(Math.random() * resArray.length)];
         USArray += resArray[random]
       }
-    }
-    document.getElementById("password").innerHTML = USArray
+      }
+    console.log(USArray);
+    document.getElementById("password").textContent = USArray
   }
 }
 
