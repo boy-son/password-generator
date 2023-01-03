@@ -34,7 +34,7 @@ function generatePassword() {
       alert("You must have at least one character type in your password");
     } else {
       for (var i = 0; i < charcount; i++) {
-        USArray.push(resArray[Math.floor[Math.random() * resArray.length]]);
+        var random = [Math.floor(Math.random() * resArray.length)];
         USArray += resArray[random]
       }
     }
